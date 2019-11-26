@@ -13,6 +13,8 @@ OC，红包雨，
 
 4、红包金额 按比例分配金额/积分（概率： 0 -10%   1-70%  3-20%）
 
+![Image text](https://github.com/9191app/RedPackRain/blob/master/Preview/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max.png)
+
 
 
 TODO:
