@@ -27,15 +27,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    [self configRedPackView];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self beginRedPackAnimal];
-    });
 }
 
+- (IBAction)startRainAction:(id)sender {
+    [self configRedPackView];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self beginRedPackAnimal];
+    });
+
+}
+
+#pragma mark -
 - (void)configRedPackView{
     __weak typeof(self) wkSelf = self;
     redPackView = [[MTRedPackView alloc] initWithFrame:self.view.bounds];
@@ -78,6 +82,7 @@
         [self.timer invalidate];
         
         [redPackView removeFromSuperview];
+        redPackView = nil;
     }
 }
 
